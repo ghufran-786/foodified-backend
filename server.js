@@ -16,13 +16,27 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Test route to verify API is running
+app.get("/", (req, res) => {
+  res.status(200).json({ 
+    message: "API running successfully",
+    timestamp: new Date().toISOString(),
+    environment: process.env.NODE_ENV || "development"
+  });
+});
+
+// Health check endpoint
+app.get("/api/health", (req, res) => {
+  res.status(200).json({ 
+    status: "healthy",
+    message: "Backend is running",
+    timestamp: new Date().toISOString()
+  });
+});
+
 app.use("/api", require("./routes/auth"));
 app.use("/api/cart", require("./routes/cart"));
 app.use("/api/payments", require("./routes/payments"));
-
-app.get("/", (req, res)=>{
-    res.send("API running...");
-});
 
 //mongdb connection
 mongoose.connect(process.env.MONGO_URI)
