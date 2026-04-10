@@ -37,6 +37,8 @@ router.post("/signup", async (req, res) => {
   try {
     const { name, email, password } = req.body;
 
+    console.log(`Signup attempt for email: ${email}`);
+
     // Validate input
     if (!name || !email || !password) {
       return res.status(400).json({ message: "Please fill in all fields" });
@@ -55,6 +57,7 @@ router.post("/signup", async (req, res) => {
     // Check if user already exists
     const existingUser = await User.findOne({ email: email.toLowerCase() });
     if (existingUser) {
+      console.log(`Email already registered: ${email}`);
       return res.status(400).json({ message: "Email already registered" });
     }
 
@@ -71,6 +74,8 @@ router.post("/signup", async (req, res) => {
     // Generate token
     const token = generateToken(user._id, user.email);
 
+    console.log(`New user created: ${email}`);
+
     res.status(201).json({ 
       message: "User created successfully",
       token,
@@ -81,14 +86,16 @@ router.post("/signup", async (req, res) => {
       } 
     });
   } catch (error) {
-    console.error("Signup error:", error);
-    res.status(500).json({ message: "Error creating user" });
+    console.error("Signup error:", error.message);
+    res.status(500).json({ message: "Error creating user", error: error.message });
   }
 });
 
 router.post("/login", loginLimiter, async (req, res) => {
   try {
     const { email, password } = req.body;
+
+    console.log(`Login attempt for email: ${email}`);
 
     // Validate input
     if (!email || !password) {
@@ -104,17 +111,21 @@ router.post("/login", loginLimiter, async (req, res) => {
     const user = await User.findOne({ email: email.toLowerCase() });
 
     if (!user) {
+      console.log(`User not found: ${email}`);
       return res.status(401).json({ message: "Invalid email or password" });
     }
 
     // Check password using bcrypt comparison
     const isPasswordValid = await user.matchPassword(password);
     if (!isPasswordValid) {
+      console.log(`Invalid password for user: ${email}`);
       return res.status(401).json({ message: "Invalid email or password" });
     }
 
     // Generate JWT token
     const token = generateToken(user._id, user.email);
+
+    console.log(`Login successful for user: ${email}`);
 
     // Login successful
     res.status(200).json({ 
@@ -127,8 +138,8 @@ router.post("/login", loginLimiter, async (req, res) => {
       } 
     });
   } catch (error) {
-    console.error("Login error:", error);
-    res.status(500).json({ message: "Error logging in" });
+    console.error("Login error:", error.message);
+    res.status(500).json({ message: "Error logging in", error: error.message });
   }
 });
 
