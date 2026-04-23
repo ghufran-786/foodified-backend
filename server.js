@@ -10,11 +10,12 @@ const app = express();
 // Allowed origins
 const allowedOrigins = [
   "http://localhost:5173",
+  "http://localhost:5174",
   "http://localhost:3000",
   process.env.FRONTEND_URL,
   "https://foodified-frontend.vercel.app"
 ].filter(Boolean);
-
+ 
 // Security middleware
 app.use(helmet()); // Secure HTTP headers
 app.use(cors({
@@ -54,6 +55,8 @@ app.get("/", (req, res) => {
 app.use("/api", require("./routes/auth"));
 app.use("/api/cart", require("./routes/cart"));
 app.use("/api/payments", require("./routes/payments"));
+app.use("/api", require("./routes/chat"));
+app.use("/api", require("./routes/seed"));
 
 // 404 handler
 app.use((req, res) => {
@@ -76,8 +79,6 @@ app.use((err, req, res, next) => {
 const connectDB = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
       serverSelectionTimeoutMS: 5000,
     });
     console.log("✓ Connected to MongoDB");
