@@ -13,6 +13,7 @@ const allowedOrigins = [
   "http://localhost:5174",
   "http://localhost:3000",
   process.env.FRONTEND_URL,
+  "https://foodified-frontend-1tfh.vercel.app",
   "https://foodified-frontend.vercel.app"
 ].filter(Boolean);
  
