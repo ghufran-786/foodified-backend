@@ -10,7 +10,7 @@ const products = [
     category: "breakfast",
     type: "veg",
     description: "Fluffy pancakes with butter and syrup",
-    image: "https://via.placeholder.com/200?text=Pancakes",
+    image: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=200&h=200&fit=crop",
     available: true
   },
   {
@@ -19,7 +19,7 @@ const products = [
     category: "breakfast",
     type: "veg",
     description: "Light and easy breakfast",
-    image: "https://via.placeholder.com/200?text=Poha",
+    image: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=200&h=200&fit=crop",
     available: true
   },
   {
@@ -28,7 +28,7 @@ const products = [
     category: "breakfast",
     type: "veg",
     description: "Savory semolina breakfast",
-    image: "https://via.placeholder.com/200?text=Upma",
+    image: "https://images.unsplash.com/photo-1598409810696-b01c5c671b50?w=200&h=200&fit=crop",
     available: true
   },
   {
@@ -37,7 +37,7 @@ const products = [
     category: "breakfast",
     type: "veg",
     description: "Steamed rice cakes with sambar",
-    image: "https://via.placeholder.com/200?text=Idli",
+    image: "https://images.unsplash.com/photo-1557803104200-b6a49d4b37b0?w=200&h=200&fit=crop",
     available: true
   },
 
@@ -48,7 +48,7 @@ const products = [
     category: "soups",
     type: "non_veg",
     description: "Warm and comforting",
-    image: "https://via.placeholder.com/200?text=Chicken+Soup",
+    image: "https://images.unsplash.com/photo-1547592166-7aae4d755be1?w=200&h=200&fit=crop",
     available: true
   },
   {
@@ -57,7 +57,7 @@ const products = [
     category: "soups",
     type: "veg",
     description: "Vegetable soup with pasta",
-    image: "https://via.placeholder.com/200?text=Minestrone+Soup",
+    image: "https://images.unsplash.com/photo-1585238341710-4edd9691794e?w=200&h=200&fit=crop",
     available: true
   },
   {
@@ -66,7 +66,7 @@ const products = [
     category: "soups",
     type: "non_veg",
     description: "Spicy Thai soup",
-    image: "https://via.placeholder.com/200?text=Tom+Yum+Soup",
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=200&h=200&fit=crop",
     available: true
   },
 
@@ -77,7 +77,7 @@ const products = [
     category: "pizza",
     type: "veg",
     description: "Classic pizza with cheese",
-    image: "https://via.placeholder.com/200?text=Margherita+Pizza",
+    image: "https://images.unsplash.com/photo-1599599810694-b308ca884160?w=200&h=200&fit=crop",
     available: true
   },
   {
@@ -86,7 +86,7 @@ const products = [
     category: "pizza",
     type: "non_veg",
     description: "Pizza with pepperoni and cheese",
-    image: "https://via.placeholder.com/200?text=Pepperoni+Pizza",
+    image: "https://images.unsplash.com/photo-1618840740266-7f50ef1d666b?w=200&h=200&fit=crop",
     available: true
   },
   {
@@ -95,7 +95,7 @@ const products = [
     category: "pizza",
     type: "veg",
     description: "Loaded with vegetables",
-    image: "https://via.placeholder.com/200?text=Veggie+Pizza",
+    image: "https://images.unsplash.com/photo-1605457479887-cd1b1b0f9b0a?w=200&h=200&fit=crop",
     available: true
   },
 
@@ -106,7 +106,7 @@ const products = [
     category: "pasta",
     type: "non_veg",
     description: "Classic Italian pasta",
-    image: "https://via.placeholder.com/200?text=Spaghetti+Carbonara",
+    image: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=200&h=200&fit=crop",
     available: true
   },
   {
@@ -115,7 +115,7 @@ const products = [
     category: "pasta",
     type: "veg",
     description: "Creamy pasta with vegetables",
-    image: "https://via.placeholder.com/200?text=Veg+Alfredo+Pasta",
+    image: "https://images.unsplash.com/photo-1645112411341-6c4ee1ce4b21?w=200&h=200&fit=crop",
     available: true
   },
   {
@@ -124,7 +124,7 @@ const products = [
     category: "pasta",
     type: "non_veg",
     description: "Creamy pasta with chicken",
-    image: "https://via.placeholder.com/200?text=Chicken+Alfredo+Pasta",
+    image: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=200&h=200&fit=crop",
     available: true
   },
   {
@@ -133,7 +133,7 @@ const products = [
     category: "pasta",
     type: "veg",
     description: "Spicy tomato pasta",
-    image: "https://via.placeholder.com/200?text=Penne+Arrabbiata",
+    image: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=200&h=200&fit=crop",
     available: true
   },
 
@@ -144,7 +144,7 @@ const products = [
     category: "main_course",
     type: "veg",
     description: "Creamy paneer curry",
-    image: "https://via.placeholder.com/200?text=Paneer+Butter+Masala",
+    image: "https://images.unsplash.com/photo-1588137378633-dea1336ce1e2?w=200&h=200&fit=crop",
     available: true
   },
   {
@@ -153,7 +153,7 @@ const products = [
     category: "main_course",
     type: "non_veg",
     description: "Tender chicken in creamy sauce",
-    image: "https://via.placeholder.com/200?text=Chicken+Tikka+Masala",
+    image: "https://images.unsplash.com/photo-1544025162-d76694265947?w=200&h=200&fit=crop",
     available: true
   },
   {
@@ -162,7 +162,7 @@ const products = [
     category: "main_course",
     type: "non_veg",
     description: "Fragrant rice with meat",
-    image: "https://via.placeholder.com/200?text=Biryani",
+    image: "https://images.unsplash.com/photo-1584199471733-d938c14031c3?w=200&h=200&fit=crop",
     available: true
   },
   {
@@ -171,7 +171,7 @@ const products = [
     category: "main_course",
     type: "veg",
     description: "Fragrant rice with vegetables",
-    image: "https://via.placeholder.com/200?text=Veg+Biryani",
+    image: "https://images.unsplash.com/photo-1573937328693-ff4def03e671?w=200&h=200&fit=crop",
     available: true
   },
   {
@@ -180,7 +180,7 @@ const products = [
     category: "main_course",
     type: "veg",
     description: "Creamy lentil curry",
-    image: "https://via.placeholder.com/200?text=Dal+Makhani",
+    image: "https://images.unsplash.com/photo-1585866398359-2ea280801f26?w=200&h=200&fit=crop",
     available: true
   },
 
@@ -191,7 +191,7 @@ const products = [
     category: "snacks",
     type: "veg",
     description: "Crispy fried pastry",
-    image: "https://via.placeholder.com/200?text=Samosa",
+    image: "https://images.unsplash.com/photo-1599023566930-f20b6748da3a?w=200&h=200&fit=crop",
     available: true
   },
   {
